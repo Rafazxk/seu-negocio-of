@@ -1,0 +1,46 @@
+body {
+    background: #0f172a;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    color: #f1f5f9;
+}
+
+#leadForm {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+label { font-size: 0.9rem; font-weight: 500; }
+
+input, textarea {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 12px;
+    color: white;
+}
+
+textarea { height: 100px; resize: none; }
+
+button {
+    margin-top: 10px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+button:hover { filter: brightness(1.1); }
