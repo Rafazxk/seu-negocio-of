@@ -1,18 +1,31 @@
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import clienteRoutes from './routes/clienteRoutes.js';
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
+// Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-// Rotas
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use('/clientes', clienteRoutes);
 
-// Rota básica para teste
 app.get('/', (req, res) => {
-  res.send('API de Clientes online!');
+  res.sendFile(path.join(__dirname, 'public', 'usuario.html'));
 });
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 
 export default app;

@@ -4,7 +4,7 @@ async function carregarHistorico() {
     const container = document.getElementById('historico-container');
     
     try {
-        const response = await fetch('http://localhost:3000/clientes');
+        const response = await fetch('https://seu-negocio-of.onrender.com');
         
         const clientes = await response.json();
 
@@ -26,8 +26,8 @@ async function carregarHistorico() {
 
 async function excluirCliente(id) {
     if(confirm('Tem certeza que deseja excluir?')) {
-        await fetch(`http://localhost:3000/clientes/${id}`, { method: 'DELETE' });
-        carregarHistorico(); // Recarrega a lista
+        await fetch(`https://seu-negocio-of.onrender.com/clientes/${id}`, { method: 'DELETE' });
+        carregarHistorico();
     }
 }
 
