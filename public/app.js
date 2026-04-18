@@ -1,10 +1,10 @@
-console.log("teste")
+
 
 async function carregarHistorico() {
     const container = document.getElementById('historico-container');
     
     try {
-        const response = await fetch('https://seu-negocio-of.onrender.com');
+        const response = await fetch('https://seu-negocio-of.onrender.com/api/clientes');
         
         const clientes = await response.json();
 
