@@ -26,7 +26,7 @@ async function carregarHistorico() {
 
 async function excluirCliente(id) {
     if(confirm('Tem certeza que deseja excluir?')) {
-        await fetch(`https://seu-negocio-of.onrender.com/clientes/${id}`, { method: 'DELETE' });
+        await fetch(`https://seu-negocio-of.onrender.com/api/clientes/${id}`, { method: 'DELETE' });
         carregarHistorico();
     }
 }

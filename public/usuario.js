@@ -9,7 +9,7 @@ document.getElementById('leadForm').addEventListener('submit', async (e) => {
     };
 
     try {
-        const response = await fetch('https://seu-negocio-of.onrender.com/clientes', {
+        const response = await fetch('https://seu-negocio-of.onrender.com/api/clientes', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(dados)
